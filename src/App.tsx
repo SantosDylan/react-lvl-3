@@ -1,6 +1,7 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import ExerciseOne from './pages/ExerciseOne';
 import ExerciseTwo from './pages/ExerciseTwo';
+import ExerciseThree from './pages/ExerciseThree';
 
 export const EXAMPLE_STORAGE_KEY = 'exampleKey';
 
@@ -18,12 +19,18 @@ function App() {
             Exercise 2
           </button>
         </Link>
+        <Link to={'/exercise-three'}>
+          <button className='bg-slate-400 rounded-md text-white px-2 py-1 hover:opacity-75'>
+            Exercise 3
+          </button>
+        </Link>
        
       </div>
       <Routes>
         <Route path='/' element={<ExerciseOne />}></Route>
         <Route path='/exercise-one' element={<ExerciseOne />}></Route>
         <Route path='/exercise-two' element={<ExerciseTwo />}></Route>
+        <Route path='/exercise-three' element={<ExerciseThree />}></Route>
       </Routes>
     </div>
   );
